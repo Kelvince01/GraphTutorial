@@ -1,0 +1,44 @@
+﻿<Page
+    x:Class="GraphTutorial.Graphs"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GraphTutorial"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:charting="using:WinRTXamlToolkit.Controls.DataVisualization.Charting"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <charting:Chart  
+            x:Name="PieChart"  
+            HorizontalAlignment="Left"  
+            VerticalAlignment="Top"  
+            Margin="0" Width="323" >
+            <charting:PieSeries Margin="0"  
+                                IndependentValuePath="Name"  
+                                DependentValuePath="Amount"  
+                                IsSelectionEnabled="True"/>
+        </charting:Chart>
+        <charting:Chart  
+            x:Name="lineChart"  
+            HorizontalAlignment="Left"  
+            VerticalAlignment="Top"  
+            Margin="0" Height="159" Width="316" >
+            <charting:LineSeries Margin="0"  
+                                 IndependentValuePath="Name"  
+                                 DependentValuePath="Amount"  
+                                 IsSelectionEnabled="True"/>
+        </charting:Chart>
+        <charting:Chart  
+            x:Name="ColumnChart"  
+            HorizontalAlignment="Left"  
+            VerticalAlignment="Top"  
+            Margin="0" Width="329" >
+            <charting:ColumnSeries Margin="0"  
+                                   IndependentValuePath="Name"  
+                                   DependentValuePath="Amount"CharacterSpacing="5"  
+                                   IsSelectionEnabled="True"/>
+        </charting:Chart>
+    </Grid>
+</Page>
